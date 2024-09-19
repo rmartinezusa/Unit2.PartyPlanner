@@ -34,27 +34,19 @@ async function getEvents() {
 // ===== Render =====
 
 function renderEvents() {
-
-    /*if (!events.length) {
-        events.innerHTML = `
-          <td>No parties near you :(</td>
-        `;
-        return;
-      }*/
-
     const events = state.events.map((event) => {
-        const td = document.createElement("tr");
-        td.innerHTML = `
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
             <td>${event.name}</td>
             <td>${event.description}</td>
             <td>${event.date}</td>
             <td>${event.location}</td>
             <td><button>Delete</button></td>
         `;
-        return td;
+        return tr;
     });
-    const tr = document.querySelector("tr");
-    tr.replaceChildren(...events);
+    const table = document.querySelector("tbody");
+    table.replaceChildren(...events);
 }
 
 
@@ -66,6 +58,6 @@ async function render() {
     await getEvents();
     renderEvents();
 }
-//render()
+render()
 
 
