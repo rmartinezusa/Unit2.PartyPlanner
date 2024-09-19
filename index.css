@@ -1,0 +1,23 @@
+form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1ch;
+    margin: 30px 40px 60px 40px;
+    padding: 30px 40px 60px 40px;
+    border: 1px solid #696969;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #696969;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
